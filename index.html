@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio & CV - Lulu Azkiyatul Husna</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            pink: '#ec4899',
+                            pinkLight: '#fbcfe8',
+                            pinkDark: '#be185d',
+                            blue: '#3b82f6',
+                            blueLight: '#bfdbfe',
+                            blueDark: '#1d4ed8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #ec4899 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #ec4899 0%, #3b82f6 100%);
+        }
+        .gradient-border {
+            border-image: linear-gradient(135deg, #ec4899, #3b82f6) 1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-pink-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-card shadow-sm transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <!-- Logo / Brand -->
+                <a href="#hero" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center text-white font-display font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                        LA
+                    </div>
+                    <span class="font-display font-bold text-xl tracking-tight text-slate-900 group-hover:text-pink-600 transition-colors">
+                        Lulu Azkiyatul<span class="text-blue-500">.</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600 text-sm">
+                    <a href="#tentang" class="hover:text-pink-600 transition-colors">Tentang Saya</a>
+                    <a href="#pengalaman" class="hover:text-pink-600 transition-colors">Pengalaman</a>
+                    <a href="#keahlian" class="hover:text-pink-600 transition-colors">Keahlian</a>
+                    <a href="#minat" class="hover:text-pink-600 transition-colors">Minat Personal</a>
+                    <a href="#kontak" class="px-5 py-2.5 rounded-full gradient-bg text-white font-semibold shadow-md shadow-pink-500/20 hover:shadow-lg hover:opacity-95 transition-all">
+                        Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md px-4 pt-3 pb-6 space-y-3">
+            <a href="#tentang" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-pink-50 hover:text-pink-600 font-medium transition-all">Tentang Saya</a>
+            <a href="#pengalaman" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-pink-50 hover:text-pink-600 font-medium transition-all">Pengalaman & Pendidikan</a>
+            <a href="#keahlian" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-pink-50 hover:text-pink-600 font-medium transition-all">Keahlian</a>
+            <a href="#minat" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-pink-50 hover:text-pink-600 font-medium transition-all">Minat Personal</a>
+            <a href="#kontak" class="block px-3 py-2.5 text-center rounded-xl gradient-bg text-white font-semibold">Hubungi Saya</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-28 sm:pt-36 pb-16 sm:pb-24 px-4 sm:px-6 relative overflow-hidden">
+        <!-- Background decorative blobs -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-pink-300/30 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-blue-300/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100/80 border border-pink-200 text-pink-700 font-medium text-xs sm:text-sm mb-6 animate-pulse">
+                <span class="w-2 h-2 rounded-full bg-pink-500"></span>
+                Pelajar Aktif & Anggota Pramuka
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                Halo, Saya <br class="hidden sm:inline" />
+                <span class="gradient-text">Lulu Azkiyatul Husna</span>
+            </h1>
+
+            <p class="text-base sm:text-xl text-slate-600 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+                Siswa SMA yang berdedikasi tinggi, aktif dalam organisasi Pramuka, berpengalaman dalam pertunjukan seni tari, serta memiliki prestasi akademis.
+            </p>
+
+            <!-- Location Badge -->
+            <div class="flex justify-center items-center gap-2 text-slate-500 text-sm mb-10">
+                <i class="fa-solid fa-location-dot text-pink-500"></i>
+                <span>Sarireja, Tanjung, Kab. Brebes, Jawa Tengah</span>
+            </div>
+
+            <!-- Call to Actions -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#pengalaman" class="w-full sm:w-auto px-8 py-3.5 rounded-full gradient-bg text-white font-semibold shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-briefcase"></i> Lihat Portofolio
+                </a>
+                <a href="#kontak" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-slate-700 font-semibold border border-slate-200 hover:border-blue-400 hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane text-blue-500"></i> Kontak Kontak
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <!-- Avatar Visual Card -->
+                <div class="md:col-span-5">
+                    <div class="relative mx-auto max-w-sm">
+                        <!-- Gradient backdrop border -->
+                        <div class="absolute -inset-1.5 rounded-3xl gradient-bg opacity-75 blur-md"></div>
+                        <div class="relative bg-white p-6 rounded-3xl shadow-xl text-center">
+                            <div class="w-32 h-32 mx-auto mb-4 rounded-full gradient-bg p-1 shadow-lg">
+                                <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+                                    <i class="fa-solid fa-user-graduate text-5xl gradient-text"></i>
+                                </div>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-slate-900">Lulu Azkiyatul H.</h3>
+                            <p class="text-xs text-pink-600 font-semibold mb-3">Lahir: 18 Januari 2011</p>
+                            <p class="text-sm text-slate-500">Brebes, Jawa Tengah</p>
+                            
+                            <div class="mt-6 pt-6 border-t border-slate-100 flex justify-around text-center">
+                                <div>
+                                    <p class="font-bold text-slate-800 text-lg">3+</p>
+                                    <p class="text-xs text-slate-500">Tingkat Pendidikan</p>
+                                </div>
+                                <div class="border-r border-slate-200"></div>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-lg">SD-SMA</p>
+                                    <p class="text-xs text-slate-500">Aktif Berorganisasi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="md:col-span-7 space-y-6">
+                    <div class="inline-block px-3 py-1 rounded-lg bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
+                        Tentang Saya
+                    </div>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900">
+                        Disiplin, Kreatif, dan Selalu Antusias Belajar Hal Baru
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Saya adalah seorang pelajar yang aktif dan bersemangat tinggi asal Sarireja, Tanjung, Brebes. Memiliki minat besar dalam bidang organisasi dan seni budaya.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Pengalaman saya ditempa sejak SD sebagai petugas upacara dan peraih peringkat paralel, berlanjut di SMP dengan menampilkan seni tari pada perayaan Kemerdekaan RI 17 Agustus, hingga kini aktif mengikuti organisasi Pramuka di SMA untuk mengasah kedisiplinan dan kepemimpinan.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <i class="fa-solid fa-award text-2xl text-pink-500 mb-2"></i>
+                            <h4 class="font-bold text-sm text-slate-800">Prestasi Akademik</h4>
+                            <p class="text-xs text-slate-500 mt-1">Peringkat Paralel di SD</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <i class="fa-solid fa-campground text-2xl text-blue-500 mb-2"></i>
+                            <h4 class="font-bold text-sm text-slate-800">Jiwa Kepemimpinan</h4>
+                            <p class="text-xs text-slate-500 mt-1">Aktif di Ekstrakulikuler Pramuka</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline & Pengalaman Section -->
+    <section id="pengalaman" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="px-3 py-1 rounded-lg bg-pink-100 text-pink-600 text-xs font-bold uppercase tracking-wider">
+                    Jejak Langkah
+                </span>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mt-3">
+                    Pengalaman & Rekam Pendidikan
+                </h2>
+                <p class="text-slate-600 mt-2">
+                    Perjalanan belajar, aktivitas organisasi, dan pencapaian dari tingkat SD hingga SMA.
+                </p>
+            </div>
+
+            <!-- Vertical Timeline -->
+            <div class="relative border-l-2 border-slate-200 ml-4 sm:ml-32 space-y-12">
+                
+                <!-- Timeline Item 3: SMA -->
+                <div class="relative pl-8 sm:pl-10 group">
+                    <!-- Date badge on left for desktop -->
+                    <div class="hidden sm:block absolute -left-32 top-1 w-24 text-right">
+                        <span class="text-sm font-bold text-pink-600 bg-pink-50 px-2.5 py-1 rounded-full border border-pink-200">
+                            Sekarang
+                        </span>
+                    </div>
+                    <!-- Circle Dot -->
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full gradient-bg flex items-center justify-center text-white text-xs shadow-md">
+                        <i class="fa-solid fa-campground"></i>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="sm:hidden mb-2">
+                            <span class="text-xs font-bold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">Sekarang</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-slate-900">Siswa SMA & Anggota Pramuka</h3>
+                        <p class="text-sm font-medium text-pink-600 mb-3">Jenjang SMA</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Aktif berpartisipasi dalam organisasi Kepramukaan sekolah. Mengikuti berbagai latihan ketangkasan, kepemimpinan, dan kegiatan sosial untuk membentuk kemandirian serta kedisiplinan.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2: SMP -->
+                <div class="relative pl-8 sm:pl-10 group">
+                    <div class="hidden sm:block absolute -left-32 top-1 w-24 text-right">
+                        <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200">
+                            SMP
+                        </span>
+                    </div>
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs shadow-md">
+                        <i class="fa-solid fa-masks-theater"></i>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="sm:hidden mb-2">
+                            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">SMP</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-slate-900">Penampil Seni Tari Hari Kemerdekaan</h3>
+                        <p class="text-sm font-medium text-blue-600 mb-3">Pentas Seni 17 Agustus (SMP)</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Dipercaya menjadi salah satu penampil tarian pada perayaan HUT Republik Indonesia ke-17 Agustus di sekolah. Berlatih secara tekun dan sukses menampilkan karya seni tari di hadapan guru dan teman-teman.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 1: SD -->
+                <div class="relative pl-8 sm:pl-10 group">
+                    <div class="hidden sm:block absolute -left-32 top-1 w-24 text-right">
+                        <span class="text-sm font-bold text-pink-600 bg-pink-50 px-2.5 py-1 rounded-full border border-pink-200">
+                            SD
+                        </span>
+                    </div>
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-pink-500 flex items-center justify-center text-white text-xs shadow-md">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="sm:hidden mb-2">
+                            <span class="text-xs font-bold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">SD</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-slate-900">Petugas Upacara & Peraih Paralel SD</h3>
+                        <p class="text-sm font-medium text-pink-600 mb-3">Jenjang Sekolah Dasar</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Secara konsisten dipercaya menjadi petugas upacara bendera sekolah. Selain aktif di kegiatan sekolah, berhasil meraih <strong class="text-slate-800">Juara Paralel</strong> atas pencapaian nilai akademis yang tinggi.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Keahlian & Soft Skills Section -->
+    <section id="keahlian" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="px-3 py-1 rounded-lg bg-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider">
+                    Potensi & Potensi Diri
+                </span>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mt-3">
+                    Keahlian & Karakter Utama
+                </h2>
+                <p class="text-slate-600 mt-2">
+                    Kombinasi antara keterampilan organisasi, bakat seni, dan karakter kedisiplinan.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Skill 1 -->
+                <div class="p-6 rounded-2xl bg-gradient-to-b from-pink-50/50 to-white border border-pink-100 hover:shadow-lg hover:-translate-y-1 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-pink-500 text-white flex items-center justify-center text-xl mb-4 shadow-md shadow-pink-500/20">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Kerja Sama Tim</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Terbiasa berkolaborasi dengan kelompok dalam organisasi Pramuka dan regu tari.
+                    </p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="p-6 rounded-2xl bg-gradient-to-b from-blue-50/50 to-white border border-blue-100 hover:shadow-lg hover:-translate-y-1 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500 text-white flex items-center justify-center text-xl mb-4 shadow-md shadow-blue-500/20">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Kedisiplinan</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Terlatih saat menjadi petugas upacara bendera dan latihan rutin kepramukaan.
+                    </p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="p-6 rounded-2xl bg-gradient-to-b from-pink-50/50 to-white border border-pink-100 hover:shadow-lg hover:-translate-y-1 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-pink-500 text-white flex items-center justify-center text-xl mb-4 shadow-md shadow-pink-500/20">
+                        <i class="fa-solid fa-icons"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Seni Pertunjukan</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Kreativitas tinggi dalam ekspresi seni tari tradisional maupun kreasi.
+                    </p>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="p-6 rounded-2xl bg-gradient-to-b from-blue-50/50 to-white border border-blue-100 hover:shadow-lg hover:-translate-y-1 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500 text-white flex items-center justify-center text-xl mb-4 shadow-md shadow-blue-500/20">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Semangat Belajar</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Memiliki fokus akademis yang baik terbukti dari peringkat paralel sekolah.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Personal Trivia Section (Favorites) -->
+    <section id="minat" class="py-16 sm:py-24 bg-gradient-to-r from-pink-50 via-slate-50 to-blue-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="px-3 py-1 rounded-lg bg-pink-100 text-pink-700 text-xs font-bold uppercase tracking-wider">
+                    Seputar Lulu
+                </span>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mt-3">
+                    Warna & Minuman Favorit
+                </h2>
+                <p class="text-slate-600 mt-2">
+                    Mengenal lebih dekat hal-hal yang disukai Lulu dalam kesehariannya!
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Color Palette Preference Card -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center">
+                                <i class="fa-solid fa-palette text-lg"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-slate-900">Warna Kesukaan</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Perpaduan warna cerah yang mencerminkan semangat keceriaan (Pink) dan ketenangan serta keharmonisan (Biru).
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 rounded-2xl bg-pink-50 border border-pink-200 text-center">
+                            <div class="w-12 h-12 rounded-full bg-pink-500 mx-auto mb-2 shadow-md"></div>
+                            <span class="font-bold text-pink-700 text-sm">Pink</span>
+                            <p class="text-[11px] text-pink-500">Ceria & Kreatif</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-center">
+                            <div class="w-12 h-12 rounded-full bg-blue-500 mx-auto mb-2 shadow-md"></div>
+                            <span class="font-bold text-blue-700 text-sm">Biru</span>
+                            <p class="text-[11px] text-blue-500">Tenang & Bijak</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Favorite Drinks Card -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
+                                <i class="fa-solid fa-glass-water text-lg"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-slate-900">Minuman Favorit</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Minuman segar dan lezat penyemangat hari usai beraktivitas dan berkegiatan organisasi.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-center">
+                            <div class="w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xl mx-auto mb-2 shadow-md">
+                                🥑
+                            </div>
+                            <span class="font-bold text-emerald-800 text-sm">Jus Alpukat</span>
+                            <p class="text-[11px] text-emerald-600">Segar & Nutrisi</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-center">
+                            <div class="w-12 h-12 rounded-full bg-amber-800 text-white flex items-center justify-center text-xl mx-auto mb-2 shadow-md">
+                                🍫
+                            </div>
+                            <span class="font-bold text-amber-900 text-sm">Cokelat</span>
+                            <p class="text-[11px] text-amber-700">Manis & Manis Favorit</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-16 sm:py-24 bg-white relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="bg-slate-900 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl">
+                <!-- Background Glowing accents -->
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+
+                <div class="relative z-10 grid md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <span class="px-3 py-1 rounded-lg bg-white/10 text-pink-300 text-xs font-bold uppercase tracking-wider">
+                            Mari Terhubung
+                        </span>
+                        <h2 class="font-display text-3xl sm:text-4xl font-bold mt-4 mb-4">
+                            Ingin Berkolaborasi atau Menyapa Lulu?
+                        </h2>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-8">
+                            Silakan kirimkan pesan singkat melalui formulir ini.
+                        </p>
+
+                        <div class="space-y-4 text-sm text-slate-300">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center text-pink-400">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <span>Desa Sarireja, Kec. Tanjung, Kab. Brebes</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center text-blue-400">
+                                    <i class="fa-solid fa-cake-candles"></i>
+                                </div>
+                                <span>18 Januari 2011</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Form -->
+                    <form id="contact-form" class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 space-y-4">
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-1">Nama Lengkap</label>
+                            <input type="text" id="form-name" required placeholder="Masukkan nama Anda" class="w-full px-4 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-pink-500 text-sm transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-1">Email / No. HP</label>
+                            <input type="text" id="form-contact" required placeholder="Kontak Anda" class="w-full px-4 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-pink-500 text-sm transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-1">Pesan</label>
+                            <textarea id="form-message" rows="3" required placeholder="Tuliskan pesan Anda..." class="w-full px-4 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-pink-500 text-sm transition-colors"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 rounded-xl gradient-bg text-white font-bold text-sm shadow-lg shadow-pink-500/25 hover:opacity-95 transition-all">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-slate-700 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm">Pesan Terkirim!</h4>
+                <p class="text-xs text-slate-400">Terima kasih telah menyapa Lulu.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 text-center text-xs text-slate-500">
+            <p>© 2026 Lulu Azkiyatul Husna. Brebes, Jawa Tengah.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when clicking nav link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Form submission handling with Toast Notification
+        const contactForm = document.getElementById('contact-form');
+        const toast = document.getElementById('toast');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Show Toast
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            // Reset Form
+            contactForm.reset();
+
+            // Hide Toast after 4 seconds
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
